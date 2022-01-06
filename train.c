@@ -19,6 +19,10 @@ const int hoehe = 28;
 // Anzahl der Trainingsdatensaetze
 const int training = 60000;
 
+// Anzahl der Input-Neuronen
+// Ein Input-Neuronen pro Pixel. Da die Bilder in Grauwerten gespeichert sind, koennen diese Werte zwsichen 0 und 255 annehmen.
+const int n1 = width * height; // 28 * 28 = 784
+
 // Sigmoidfunktion
 double sigmoid(double x) {
     return 1.0 / (1.0 + exp(-x));
