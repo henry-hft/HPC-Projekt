@@ -12,6 +12,13 @@
 
 using namespace std;
 
+// Bildgroesse MNIST Datensatz
+const int breite = 28;
+const int hoehe = 28;
+
+// Anzahl der Trainingsdatensaetze
+const int training = 60000;
+
 // Sigmoidfunktion
 double sigmoid(double x) {
     return 1.0 / (1.0 + exp(-x));
