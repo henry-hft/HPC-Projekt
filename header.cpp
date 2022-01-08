@@ -1,11 +1,11 @@
 // MNIST Datensatz
-
+const string folder = "mnist/";
 
 // Trainingsdaten
 // Labels
-extern const string train_labels = "train_labels.dat";
+extern const string train_labels = folder + "train_labels.dat";
 // Bilder
-extern const string train_images = "train_images.dat";
+extern const string train_images = folder + "train_images.dat";
 
 // Anzahl der Traningsbilder
 const int train_amount = 50000;
@@ -13,9 +13,9 @@ const int train_amount = 50000;
 
 // Testdaten
 // Labels
-extern const string test_labels = "test_labels.dat";
+extern const string test_labels = folder + "test_labels.dat";
 // Bilder
-extern const string test_images = "test_images.dat";
+extern const string test_images = folder + "test_images.dat";
 
 // Anzahl der Testbilder
 extern const int test_amount = 10000;
