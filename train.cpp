@@ -10,25 +10,9 @@
 #include <iterator>
 #include <algorithm>
 
+#include "header.hpp"
+
 using namespace std;
-
-// Bildgroesse MNIST Datensatz
-const int breite = 28;
-const int hoehe = 28;
-
-// Anzahl der Trainingsdatensaetze
-const int training = 60000;
-
-// Input Layer
-// Anzahl der Input-Neuronen
-// Ein Input-Neuronen pro Pixel. Da die Bilder in Grauwerten gespeichert sind, koennen diese Werte zwsichen 0 und 255 annehmen.
-const int input = breite * hoehe; // 28 * 28 = 784
-
-// Hidden Layer
-const int hidden = 128; // 128 Neuronen
-
-// Output Layer
-const int output = 10; // 0-9 (10 moegliche Ausgaenge)
 
 // Sigmoidfunktion
 double sigmoid(double x) {
