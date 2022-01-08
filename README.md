@@ -12,5 +12,5 @@ g++ train.o -o train -fopenmp -lpthread
 Compile test.cpp:
 ```
 g++ -c test.cpp -o test.o -fopenmp
-g++ test.o -o test -fopenmp -lpthread`
-``
+g++ test.o -o test -fopenmp -lpthread
+```
