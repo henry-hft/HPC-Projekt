@@ -3,9 +3,9 @@
 
 // Trainingsdaten
 // Labels
-extern const string train_labels = "mnist/train-labels.idx1-ubyte";
+extern const string train_labels = "train_labels.dat";
 // Bilder
-extern const string train_images = "mnist/train-images.idx3-ubyte";
+extern const string train_images = "train_images.dat";
 
 // Anzahl der Traningsbilder
 const int train_amount = 50000;
@@ -13,9 +13,9 @@ const int train_amount = 50000;
 
 // Testdaten
 // Labels
-extern const string test_labels = "mnist/train-labels.idx1-ubyte";
+extern const string test_labels = "test_labels.dat";
 // Bilder
-extern const string test_images = "mnist/train-images.idx3-ubyte";
+extern const string test_images = "test_images.dat";
 
 // Anzahl der Testbilder
 extern const int test_amount = 10000;
