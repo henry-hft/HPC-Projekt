@@ -8,7 +8,7 @@ extern const string train_labels = folder + "train_labels.dat";
 extern const string train_images = folder + "train_images.dat";
 
 // Anzahl der Traningsbilder
-const int train_amount = 50000;
+const int train_amount = 60000;
 
 
 // Testdaten
