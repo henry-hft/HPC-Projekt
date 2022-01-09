@@ -29,10 +29,10 @@ extern const int height = 28;
 extern const string model = "model.txt";
 
 // Ausgabedatei Training
-extern const string train_output = "train_output.txt";
+extern const string train_output = "train_output.csv";
 
 // Ausgabedatei Test
-extern const string test_output = "train_output.txt";
+extern const string test_output = "test_output.txt";
 
 // Input Layer
 // Anzahl der Input-Neuronen
