@@ -58,3 +58,17 @@ double sigmoid_function(double x) {
     result = 1 / (1 + exp(-x));
     return result;
 }
+
+
+// Info
+void info() {
+    cout << "HPC-Computing Projekt WiSe 21/22 (Neuronales Netz für MNIST Datensatz)" << endl;
+    cout << "Input-Layer: " << input << " Neuronen" << endl;
+    cout << "Hidden-Layer: " << hidden << " Neuronen" << endl;
+    cout << "Output-Layer: " << output << " Neuronen" << endl;
+    cout << "Anzahl Epochen: " << epochs << endl;
+    cout << "Lernrate: " << learning_rate << endl;
+    cout << "Trainingsdaten (Bilder): " << train_images << endl;
+    cout << "Trainingsdaten (Labels): " << train_labels << endl;
+    cout << "Anzahl Trainingsdaten: " << train_amount << endl << endl;
+}
