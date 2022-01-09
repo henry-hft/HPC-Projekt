@@ -50,3 +50,11 @@ extern const int epochs = 512;
 
 // Lernrate
 extern const double learning_rate = 0.001;
+
+
+// Sigmoidfunktion
+double sigmoid_function(double x) {
+    double result;
+    result = 1 / (1 + exp(-x));
+    return result;
+}
