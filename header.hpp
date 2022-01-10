@@ -61,14 +61,27 @@ double sigmoid_function(double x) {
 
 
 // Info
-void info() {
-    cout << "HPC-Computing Projekt WiSe 21/22 (Neuronales Netz für MNIST Datensatz)" << endl;
+void info(bool training) {
+        string data = "";
+        string type = "";
+        if(training == true){
+                type = "Training";
+                data = "Trainingsdaten";
+        } else {
+                type = "Test";
+                data = "Testdaten";
+        }
+
+    cout << "------ " << type << " ------" << endl;
+    cout << "HPC-Computing Projekt WiSe 21/22" << endl;
+    cout << "Neuronales Netz mit OpenMP für MNIST Datensatz" << endl;
+    cout << endl;
     cout << "Input-Layer: " << input << " Neuronen" << endl;
     cout << "Hidden-Layer: " << hidden << " Neuronen" << endl;
     cout << "Output-Layer: " << output << " Neuronen" << endl;
     cout << "Anzahl Epochen: " << epochs << endl;
     cout << "Lernrate: " << learning_rate << endl;
-    cout << "Trainingsdaten (Bilder): " << train_images << endl;
-    cout << "Trainingsdaten (Labels): " << train_labels << endl;
-    cout << "Anzahl Trainingsdaten: " << train_amount << endl << endl;
+    cout << data << " (Bilder): " << train_images << endl;
+    cout << data << " (Labels): " << train_labels << endl;
+    cout << "Anzahl " << data << ": " << train_amount << endl << endl;
 }
