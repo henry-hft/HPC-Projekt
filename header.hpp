@@ -14,7 +14,7 @@
 
 using namespace std;
 
-#define THREADS 4
+#define THREADS 12
 // Training image file name
 
 extern const string train_images = "mnist/train-images.idx3-ubyte";
