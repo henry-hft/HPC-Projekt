@@ -2,6 +2,7 @@
 
 MNIST dataset source: http://yann.lecun.com/exdb/mnist/
 
+![](https://github.com/henry-hft/HPC-Projekt/blob/main/neural_network.png)
 
 Compile train.cpp:
 ```
