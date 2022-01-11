@@ -5,12 +5,10 @@ MNIST dataset source: http://yann.lecun.com/exdb/mnist/
 
 Compile train.cpp:
 ```
-g++ -c train.cpp -o train.o -fopenmp
-g++ train.o -o train -fopenmp -lpthread
+g++ -fopenmp train.cpp
 ```
 
 Compile test.cpp:
 ```
-g++ -c test.cpp -o test.o -fopenmp
-g++ test.o -o test -fopenmp -lpthread
+g++ test.cpp
 ```
