@@ -159,7 +159,7 @@ int main(int argc, char *argv[]) {
     
     int correct = 0;
     for (int sample = 1; sample <= test_amount; ++sample) {
-        cout << "Sample " << sample << endl;
+        cout << "Testbild Nr. " << sample << endl;
         
         // Getting (image, label)
         int label = input();
@@ -182,7 +182,7 @@ int main(int argc, char *argv[]) {
 		if (label == predict) {
 			++correct;
 			cout << "Klassifizierung: JA, Label: " << label << ", Vorhersage: " << predict << endl << endl;
-            output << "Beispiel Nr. " << sample << ": JA. Label = " << label << ". Vorhersage: " << predict << ", Fehler = " << error << endl;
+            output << "Testbild Nr. " << sample << ": JA. Label = " << label << ". Vorhersage: " << predict << ", Fehler = " << error << endl;
 		} else {
 			cout << "Klassifizierung: NEIN, Label: " << label << ", Vorhersage: " << predict << endl;
             cout << "Bild:" << endl;
@@ -193,7 +193,7 @@ int main(int argc, char *argv[]) {
                 cout << endl;
             }
             cout << endl;
-            output << "Beispiel Nr. " << sample << ": NEIN,  Label = " << label << ", Vorhersage: " << predict << ", Fehler: " << error << endl;
+            output << "Testbild Nr. " << sample << ": NEIN,  Label = " << label << ", Vorhersage: " << predict << ", Fehler: " << error << endl;
 		}
     }
 
@@ -203,7 +203,7 @@ int main(int argc, char *argv[]) {
     printf("Genauigkeit: %0.2lf\n", accuracy);
 
     output << "Anzahl korrekter Vorhersagen: " << correct << " / " << test_amount << endl;
-    output << "Genauigkeit: " << accuracy << endl;
+    output << "Genauigkeit: " << accuracy << "%" << endl;
 
     output.close();
     image.close();
