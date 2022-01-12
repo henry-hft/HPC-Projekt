@@ -14,22 +14,36 @@
 
 using namespace std;
 
+// Number of OpenMP Threads
 #define THREADS 12
-// Training image file name
 
+// Training images file name
 extern const string train_images = "mnist/train-images.idx3-ubyte";
 
-// Training label file name
+// Training labels file name
 extern const string train_labels = "mnist/train-labels.idx1-ubyte";
+
+// Test images file name
+extern const string train_images = "mnist/t10k-images.idx3-ubyte";
+
+// Test labels file name
+extern const string train_labels = "mnist/t10k-labels.idx1-ubyte";
 
 // Weights file name
 extern const string model = "model/model.txt";
 
-// Report file name
-extern const string report_fn = "training-report.dat";
+// Training output file name
+extern const string training_output = "output/training.txt";
+
+// Test output file name
+extern const string training_output = "output/test.txt";
+
 
 // Number of training samples
 extern const int train_amount = 60000;
+
+// Number of test samples
+extern const int test_amount = 60000;
 
 // Image size in MNIST database
 extern const int width = 28;
