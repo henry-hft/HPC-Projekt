@@ -24,10 +24,10 @@ extern const string train_images = "mnist/train-images.idx3-ubyte";
 extern const string train_labels = "mnist/train-labels.idx1-ubyte";
 
 // Test images file name
-extern const string train_images = "mnist/t10k-images.idx3-ubyte";
+extern const string test_images = "mnist/t10k-images.idx3-ubyte";
 
 // Test labels file name
-extern const string train_labels = "mnist/t10k-labels.idx1-ubyte";
+extern const string test_labels = "mnist/t10k-labels.idx1-ubyte";
 
 // Weights file name
 extern const string model = "models/model.txt";
