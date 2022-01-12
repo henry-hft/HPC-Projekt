@@ -36,14 +36,14 @@ extern const string model = "model/model.txt";
 extern const string training_output = "output/training.txt";
 
 // Test output file name
-extern const string training_output = "output/test.txt";
+extern const string test_output = "output/test.txt";
 
 
 // Number of training samples
 extern const int train_amount = 60000;
 
 // Number of test samples
-extern const int test_amount = 60000;
+extern const int test_amount = 10000;
 
 // Image size in MNIST database
 extern const int width = 28;

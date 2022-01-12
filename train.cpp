@@ -11,40 +11,36 @@ double mnist_training_data[60000][784];
 double mnist_label_data[60000][10];
 
 // File stream für Messergebnisse
-ofstream report;
+ofstream output;
 
 void read_images()
 {
     //"mnist/train-images.idx3-ubyte"
     ifstream file (train_images,ios::in | ios::binary);
-    if (file.is_open())
-    {
+    if (file.is_open()){
         int magic_number = 0;
         int number_of_images = 0;
-        int n_rows = 0;
-        int n_cols = 0;
+        int rows = 0;
+        int columns = 0;
         file.read((char*)&magic_number,sizeof(magic_number));
-        magic_number= reverse_integer(magic_number);
+        magic_number = reverse_integer(magic_number);
         file.read((char*)&number_of_images,sizeof(number_of_images));
-        number_of_images= reverse_integer(number_of_images);
-        file.read((char*)&n_rows,sizeof(n_rows));
-        n_rows= reverse_integer(n_rows);
-        file.read((char*)&n_cols,sizeof(n_cols));
-        n_cols= reverse_integer(n_cols);
+        number_of_images = reverse_integer(number_of_images);
+        file.read((char*)&rows,sizeof(rows));
+        rows = reverse_integer(rows);
+        file.read((char*)&columns,sizeof(columns));
+        columns = reverse_integer(columns);
 		
-        for(int i=0;i<number_of_images;++i)
-        {
-            for(int r = 0; r < n_rows; ++r)
-            {
-                for(int c = 0; c < n_cols; ++c)
-                {
+        for(int i = 0; i < number_of_images; ++i){
+            for(int r = 0; r < rows; ++r){
+                for(int c = 0; c < columns; ++c){
                     unsigned char temp = 0;
                     file.read((char*)&temp,sizeof(temp));
                     if(temp == 0){
-                        mnist_training_data[i][(n_rows*r)+c]= (double)temp;
+                        mnist_training_data[i][(rows*r)+c]= (double)temp;
                     }
                     else {
-                        mnist_training_data[i][(n_rows*r)+c]=1;
+                        mnist_training_data[i][(rows*r)+c]=1;
                     }
                     
                 }
@@ -60,8 +56,6 @@ void read_labels(){
     if (file.is_open()){
         int num = 0;
         int magic_number = 0;
-        int n_rows = 0;
-        int n_cols = 0;
         file.read((char*) &magic_number, sizeof(magic_number));
         magic_number = reverse_integer(magic_number);
         file.read((char*) &num,sizeof(num));
@@ -141,7 +135,7 @@ int main(int argc, char *argv[]) {
     
     info(true);
 
-    report.open(report_fn.c_str(), ios::out);
+    output.open(training_output.c_str(), ios::out);
 		
 	cout << "Start Training..." << endl;
 	
@@ -292,8 +286,8 @@ int main(int argc, char *argv[]) {
             }                       
         }
     }
-	cout << "Training beendet!" << endl;
 	clock_t end = clock();
+	cout << "Training beendet!" << endl;
     double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
     cout << "Laufzeit: " << elapsed_secs << " Sekunden" << " (" << THREADS << " Threads" << ")" << endl;
 	cout << elapsed_secs / THREADS << " Sekunden pro Thread" << endl;
@@ -312,8 +306,8 @@ int main(int argc, char *argv[]) {
 
 	// Neuronales Netz speichern
     save_weights();
-    report << "Laufzeit: " << elapsed_secs << " Sekunden" << " (" << THREADS << " Threads" << ")" << endl;
-    report.close();
+    output << "Laufzeit: " << elapsed_secs << " Sekunden" << " (" << THREADS << " Threads" << ")" << endl;
+    output.close();
     
     return 0;
 }
