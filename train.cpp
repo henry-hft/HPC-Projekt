@@ -145,7 +145,7 @@ int main(int argc, char *argv[]) {
     int sample_per_thread = train_amount / THREADS;
     #pragma omp parallel num_threads(THREADS) default(none) shared(cout, mnist_label_data,mnist_training_data,sample_per_thread,global_w2,global_w1)
     {
-        const string model = "model/model.txt";
+        const string model = "models/model.txt";
         
 		// Von Layer 1 zu Layer 2 bzw. Input-Layer zu Hidden-Layer
         double w1[784][128], delta1[784][128], out1[784];
