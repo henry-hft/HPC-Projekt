@@ -18,7 +18,7 @@ ifstream image;
 // File streams zum Einlesen der Labels
 ifstream label;
 // File streams zum Schreiben der Ergebnisse in die Ausgabedatei
-ofstream report;
+ofstream output;
 
 // Speicherzuweisung
 void init_array() {
