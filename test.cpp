@@ -154,7 +154,7 @@ int main(int argc, char *argv[]) {
 		
 	// Initalisierung des neuronalen Netes
     init_array(); // Speicherzuweisung
-    load_model(model_fn); // Lädt die Gewichte des trainieren neuronalen Netzes
+    load_model(); // Lädt die Gewichte des trainieren neuronalen Netzes
     
     int correct = 0;
     for (int sample = 1; sample <= test_amount; ++sample) {
