@@ -182,7 +182,7 @@ int main(int argc, char *argv[]) {
 		if (label == predict) {
 			++correct;
 			cout << "Klassifizierung: JA, Label: " << label << ", Vorhersage: " << predict << endl << endl;
-            output << "Testbild Nr. " << sample << ": JA. Label = " << label << ". Vorhersage: " << predict << ", Fehler = " << error << endl;
+            output << "Testbild Nr. " << sample << ": JA, Label = " << label << ", Vorhersage: " << predict << ", Fehler: " << error << endl;
 		} else {
 			cout << "Klassifizierung: NEIN, Label: " << label << ", Vorhersage: " << predict << endl;
             cout << "Bild:" << endl;
@@ -193,7 +193,7 @@ int main(int argc, char *argv[]) {
                 cout << endl;
             }
             cout << endl;
-            output << "Testbild Nr. " << sample << ": NEIN,  Label = " << label << ", Vorhersage: " << predict << ", Fehler: " << error << endl;
+            output << "Testbild Nr. " << sample << ": NEIN, Label = " << label << ", Vorhersage: " << predict << ", Fehler: " << error << endl;
 		}
     }
 
