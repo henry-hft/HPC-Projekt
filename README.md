@@ -6,10 +6,10 @@ MNIST dataset source: http://yann.lecun.com/exdb/mnist/
 
 Compile train.cpp:
 ```
-g++ -fopenmp train.cpp
+g++ -fopenmp train.cpp -o train.out
 ```
 
 Compile test.cpp:
 ```
-g++ test.cpp
+g++ test.cpp -o test.out
 ```
