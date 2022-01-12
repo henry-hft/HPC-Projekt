@@ -79,7 +79,7 @@ void perceptron() {
 	}
 
     for (int i = 1; i <= hidden_layer; ++i) {
-		out2[i] = sigmoid(ihidden_layer[i]);
+		out2[i] = sigmoid_function(ihidden_layer[i]);
 	}
 
     for (int i = 1; i <= hidden_layer; ++i) {
@@ -89,7 +89,7 @@ void perceptron() {
 	}
 
     for (int i = 1; i <= output_layer; ++i) {
-		out3[i] = sigmoid(ioutput_layer[i]);
+		out3[i] = sigmoid_function(ioutput_layer[i]);
 	}
 }
 
@@ -137,7 +137,8 @@ int input() {
 
 // Main
 int main(int argc, char *argv[]) {
-	info();
+	
+	info(false);
 	
     output.open(test_output.c_str(), ios::out);
     image.open(test_images.c_str(), ios::in | ios::binary); // Binärdatei mit den Bildern
