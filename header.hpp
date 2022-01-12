@@ -14,53 +14,59 @@
 
 using namespace std;
 
-// Number of OpenMP Threads
+// Anazhl der OpenMP Threads
 #define THREADS 12
 
-// Training images file name
-extern const string train_images = "mnist/train-images.idx3-ubyte";
 
-// Training labels file name
+// Trainingsdaten
+// Bilder
+extern const string train_images = "mnist/train-images.idx3-ubyte";
+// Labels
 extern const string train_labels = "mnist/train-labels.idx1-ubyte";
 
-// Test images file name
+// Testdaten
+// Bilder
 extern const string test_images = "mnist/t10k-images.idx3-ubyte";
-
-// Test labels file name
+// Labels
 extern const string test_labels = "mnist/t10k-labels.idx1-ubyte";
 
-// Weights file name
+// Datei, die die Gewichte enthält, also das neuronale Netz.
 extern const string model = "models/model.txt";
 
-// Training output file name
+// Ausgabedatei Training
 extern const string training_output = "output/training.txt";
 
-// Test output file name
+// Ausgabedatei Test
 extern const string test_output = "output/test.txt";
 
 
-// Number of training samples
+// Anzahl der Trainingsbilder
 extern const int train_amount = 60000;
 
-// Number of test samples
+// Anzahl der Testbilder
 extern const int test_amount = 10000;
 
-// Image size in MNIST database
+// Größe der Bilder des MNIST-Datensatzes in Pixeln
 extern const int width = 28;
 extern const int height = 28;
 
-// n1 = Number of input neurons
-// n2 = Number of hidden neurons ResearchPriority1
-// n3 = Number of output neurons
-// epochs = Number of iterations for back-propagation algorithm
-// learning_rate = Learing rate
-// momentum = Momentum (heuristics to optimize back-propagation algorithm)
-// epsilon = Epsilon, no more iterations if the learning error is smaller than epsilon
+// Input Layer
+// Anzahl der Input-Neuronen
+// Ein Input-Neuronen pro Pixel. Da die Bilder in Grauwerten gespeichert sind, koennen diese Werte zwsichen 0 und 255 annehmen.
+extern const int input_layer = width * height; // 28 * 28 = 784 (784 Neuronen)
 
-extern const int input_layer = width * height; // = 784, without bias neuron 
-extern const int hidden_layer = 128; 
-extern const int output_layer = 10; // Ten classes: 0 - 9
+
+// Hidden Layer
+extern const int hidden_layer = 128; // 128 Neuronen
+
+// Output Layer
+extern const int output_layer = 10; // 0-9 (10 moegliche Ausgaenge), 10 Neuronen
+
+
+// Epochen (Anzahl der Durchläufe durch das Traningsset)
 extern const int epochs = 10;
+
+// Lernrate
 extern const double learning_rate = 0.001;
 
 // Info
