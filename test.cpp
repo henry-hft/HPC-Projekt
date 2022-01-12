@@ -200,7 +200,7 @@ int main(int argc, char *argv[]) {
     // Zusammenfassung
     double accuracy = (double)(correct) / test_amount * 100.0;
     cout << "Anzahl korrekter Vorhersagen: " << correct << " / " << test_amount << endl;
-    printf("Genauigkeit: %0.2lf\n", accuracy);
+    cout << "Genauigkeit: " << accuracy << "%" << endl;
 
     output << "Anzahl korrekter Vorhersagen: " << correct << " / " << test_amount << endl;
     output << "Genauigkeit: " << accuracy << "%" << endl;
