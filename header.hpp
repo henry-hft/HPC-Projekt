@@ -30,7 +30,7 @@ extern const string train_images = "mnist/t10k-images.idx3-ubyte";
 extern const string train_labels = "mnist/t10k-labels.idx1-ubyte";
 
 // Weights file name
-extern const string model = "model/model.txt";
+extern const string model = "models/model.txt";
 
 // Training output file name
 extern const string training_output = "output/training.txt";
