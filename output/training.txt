@@ -1,1 +1,1 @@
-Laufzeit: 4858.93 Sekunden (2 Threads)
+Laufzeit: 5326.07 Sekunden (12 Threads)
