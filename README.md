@@ -14,6 +14,8 @@ Compile test.cpp:
 g++ test.cpp -o test.out
 ```
 
+<br/><br/>
+
 Run train.out:
 ```
 chmod +x train.out
