@@ -13,3 +13,15 @@ Compile test.cpp:
 ```
 g++ test.cpp -o test.out
 ```
+
+Run train.out:
+```
+chmod +x train.out
+./train.out
+```
+
+Run test.out:
+```
+chmod +x test.out
+./test.out
+```
