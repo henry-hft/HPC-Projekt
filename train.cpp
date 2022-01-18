@@ -18,22 +18,13 @@ void read_images()
     //"mnist/train-images.idx3-ubyte"
     ifstream file (train_images,ios::in | ios::binary);
     if (file.is_open()){
-        int magic_number = 0;
-        int number_of_images = 0;
-        int rows = 0;
-        int columns = 0;
-        file.read((char*)&magic_number,sizeof(magic_number));
-        magic_number = reverse_integer(magic_number);
-        file.read((char*)&number_of_images,sizeof(number_of_images));
-        number_of_images = reverse_integer(number_of_images);
-        file.read((char*)&rows,sizeof(rows));
-        rows = reverse_integer(rows);
-        file.read((char*)&columns,sizeof(columns));
-        columns = reverse_integer(columns);
+        
+	unsigned char buffer[16];	
+        file.read((char*)&buffer,sizeof(buffer));
 		
-        for(int i = 0; i < number_of_images; ++i){
-            for(int r = 0; r < rows; ++r){
-                for(int c = 0; c < columns; ++c){
+        for(int i = 0; i < train_amount; ++i){
+            for(int r = 0; r < width; ++r){
+                for(int c = 0; c < height; ++c){
                     unsigned char temp = 0;
                     file.read((char*)&temp,sizeof(temp));
                     if(temp == 0){
@@ -54,12 +45,8 @@ void read_labels(){
     ifstream file (train_labels,ios::in | ios::binary);
 
     if (file.is_open()){
-        int num = 0;
-        int magic_number = 0;
-        file.read((char*) &magic_number, sizeof(magic_number));
-        magic_number = reverse_integer(magic_number);
-        file.read((char*) &num,sizeof(num));
-        num = reverse_integer(num);
+        unsigned char buffer[8];	
+        file.read((char*)&buffer,sizeof(buffer));
 
         for(int i = 0; i < train_amount; ++i) {
             unsigned char temp = 0;
